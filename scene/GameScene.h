@@ -47,6 +47,7 @@ class GameScene {
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
+	WorldTransform worldTransform_;
 
 	/// <summary>
 	/// ゲームシーン用

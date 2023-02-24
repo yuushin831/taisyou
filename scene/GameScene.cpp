@@ -18,21 +18,30 @@ void GameScene::Initialize() {
 
 	textureHandleSong_ = TextureManager::Load("0001.png");
 	spritesong_ = Sprite::Create(textureHandleSong_, { 100,50 });
+
+	worldTransform_.Initialize();
 }
 
 void GameScene::Update() 
 {
-	DirectX::XMFLOAT2 position = spritesong_->GetPosition();
+	Vector2 p = spritesong_->GetPosition();
+	/*DirectX position_{};
+	position_.x *= p.x;
+	position_.y *= p.y;*/
 
 	if (input_->PushKey(DIK_D))
 	{
-	position.x+=10.0f;
+		p.x += 10.0f;
 	}
 	if (input_->PushKey(DIK_A))
 	{
-		position.x -= 10.0f;
+		p.x -= 10.0f;
 	}
-	spritesong_->SetPosition(position);
+	spritesong_->SetPosition(p);
+
+	debugText_->Printf("%f",p.x);
+	debugText_->SetPos(0, 15);
+	worldTransform_.TransferMatrix();
 }
 
 void GameScene::Draw() {
