@@ -17,7 +17,7 @@ void GameScene::Initialize() {
 	debugText_ = DebugText::GetInstance();
 
 	textureHandleSong_ = TextureManager::Load("0001.png");
-	spritesong_ = Sprite::Create(textureHandleSong_, { 100,50 });
+	spritesong_ = Sprite::Create(textureHandleSong_, { 860,360 });
 
 	worldTransform_.Initialize();
 }
@@ -29,18 +29,30 @@ void GameScene::Update()
 	position_.x *= p.x;
 	position_.y *= p.y;*/
 
-	if (input_->PushKey(DIK_D))
+	if (input_->TriggerKey(DIK_D))
 	{
-		p.x += 10.0f;
+		p.x += 300.0f;
+
 	}
-	if (input_->PushKey(DIK_A))
+	if (input_->TriggerKey(DIK_A))
 	{
-		p.x -= 10.0f;
+		p.x -= 300.0f;
 	}
+	/*if (input_->PushKey(DIK_S))
+	{
+		p.y += 10.0f;
+	}
+	if (input_->PushKey(DIK_W))
+	{
+		p.y -= 10.0f;
+	}*/
 	spritesong_->SetPosition(p);
 
 	debugText_->Printf("%f",p.x);
 	debugText_->SetPos(0, 15);
+	debugText_->Printf("%f",p.y);
+	debugText_->SetPos(0, 30);
+
 	worldTransform_.TransferMatrix();
 }
 
