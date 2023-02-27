@@ -52,6 +52,27 @@ class GameScene {
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
+	
+	//枠
+	uint32_t textureHandleFrame_ = 0;
+	Sprite* spriteframe_ = nullptr;
+	//1
 	uint32_t textureHandleSong_ = 0;
 	Sprite* spritesong_ = nullptr;
+	//2
+	uint32_t textureHandleSong2_ = 0;
+	Sprite* spritesong2_ = nullptr;
+	//3
+	uint32_t textureHandleSong3_ = 0;
+	Sprite* spritesong3_ = nullptr;
+	//4
+	uint32_t textureHandleSong4_ = 0;
+	Sprite* spritesong4_ = nullptr;
+	//5
+	uint32_t textureHandleSong5_ = 0;
+	Sprite* spritesong5_ = nullptr;
+	
+	//BG
+	uint32_t textureHandleBG_ = 0;
+	Sprite* spriteBG_ = nullptr;
 };
