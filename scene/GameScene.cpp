@@ -55,18 +55,23 @@ void GameScene::Update()
 	if (input_->TriggerKey(DIK_D))
 	{
 		p.x += 300.0f;
-		
+		if (p.x == 2360)
+		{
+			p.x = -340;
+		}
 
 	}
 	if (input_->TriggerKey(DIK_A))
 	{
 		p.x -= 300.0f;
+
+		if (p.x == -340)
+		{
+			p.x = 1760;
+		}
 		
 	}
-	if (p.x == -340)
-	{
-		p.x = 1760;
-	}
+	
 	
 	spritesong_->SetPosition(p);
 	//------------------------------2-------------------------
@@ -75,17 +80,21 @@ void GameScene::Update()
 	{
 		
 		p2.x += 300.0f;
+		if (p2.x == 2360)
+		{
+			p2.x = -340;
+		}
 
 	}
 	if (input_->TriggerKey(DIK_A))
 	{
-		
 		p2.x -= 300.0f;
+		if (p2.x == -340)
+		{
+			p2.x = 1760;
+		}
 	}
-	if (p2.x == -340)
-	{
-		p2.x = 1760;
-	}
+	
 	spritesong2_->SetPosition(p2);
 	//------------------------------2-------------------------
 	Vector2 p3 = spritesong3_->GetPosition();
@@ -93,53 +102,64 @@ void GameScene::Update()
 	{
 
 		p3.x += 300.0f;
+		if (p3.x == 2360)
+		{
+			p3.x = -340;
+		}
 
 	}
 	if (input_->TriggerKey(DIK_A))
 	{
-
 		p3.x -= 300.0f;
+		if (p3.x == -340)
+		{
+			p3.x = 1760;
+		}
 	}
-	if (p3.x == -340)
-	{
-		p3.x = 1760;
-	}
+	
 	spritesong3_->SetPosition(p3);
 	//------------------------------4-------------------------
 	Vector2 p4 = spritesong4_->GetPosition();
 	if (input_->TriggerKey(DIK_D))
 	{
-
 		p4.x += 300.0f;
+		if (p4.x == 2360)
+		{
+			p4.x = -340;
+		}
 
 	}
 	if (input_->TriggerKey(DIK_A))
 	{
 
 		p4.x -= 300.0f;
+		if (p4.x == -340)
+		{
+			p4.x = 1760;
+		}
 	}
-	if (p4.x == -340)
-	{
-		p4.x = 1760;
-	}
+	
 	spritesong4_->SetPosition(p4);
 	//------------------------------5-------------------------
 	Vector2 p5 = spritesong5_->GetPosition();
 	if (input_->TriggerKey(DIK_D))
 	{
-
 		p5.x += 300.0f;
+		if (p5.x == 2360)
+		{
+			p5.x = -340;
+		}
 
 	}
 	if (input_->TriggerKey(DIK_A))
 	{
-
 		p5.x -= 300.0f;
+		if (p5.x == -340)
+		{
+			p5.x = 1760;
+		}
 	}
-	if (p5.x == -340)
-	{
-		p5.x = 1760;
-	}
+	
 	spritesong5_->SetPosition(p5);
 	//------------------------------6-------------------------
 	/*Vector2 p6 = spritesong6_->GetPosition();
@@ -177,10 +197,10 @@ void GameScene::Update()
 
 
 
-	/*debugText_->Printf("%f",p.x);
+	debugText_->Printf("%f",p.x);
 	debugText_->SetPos(0, 15);
 	debugText_->Printf("%f",p.y);
-	debugText_->SetPos(0, 30);*/
+	debugText_->SetPos(0, 30);
 
 	
 }
